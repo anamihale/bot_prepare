@@ -46,7 +46,10 @@ namespace Converter {
 						var wb = app.Workbooks.Open(file);
 						try {
 							var fileName = System.IO.Path.GetFileNameWithoutExtension(file);
-							wb.SaveAs(fbd.SelectedPath + System.IO.Path.DirectorySeparatorChar + fileName + ".csv", XlFileFormat.xlCSV);
+							wb.SaveAs(
+								Filename: fbd.SelectedPath + System.IO.Path.DirectorySeparatorChar + fileName + ".csv", 
+								FileFormat: XlFileFormat.xlCSV,
+								TextCodepage: "UTF-8");
 						} finally {
 							wb.Close();
 						}
