@@ -30,9 +30,10 @@
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.@__convertBanks = new System.Windows.Forms.Button();
-			this.@__convertSynonyms = new System.Windows.Forms.Button();
 			this.@__convertNorms = new System.Windows.Forms.Button();
+			this.@__convertSynonyms = new System.Windows.Forms.Button();
+			this.@__convertBanks = new System.Windows.Forms.Button();
+			this.@__converValues = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -109,6 +110,7 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.@__converValues);
 			this.tabPage2.Controls.Add(this.@__convertNorms);
 			this.tabPage2.Controls.Add(this.@__convertSynonyms);
 			this.tabPage2.Controls.Add(this.@__convertBanks);
@@ -120,17 +122,17 @@
 			this.tabPage2.Text = "Convert CSV to SQL";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// __convertBanks
+			// __convertNorms
 			// 
-			this.@__convertBanks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.@__convertNorms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.@__convertBanks.Location = new System.Drawing.Point(8, 6);
-			this.@__convertBanks.Name = "__convertBanks";
-			this.@__convertBanks.Size = new System.Drawing.Size(320, 23);
-			this.@__convertBanks.TabIndex = 0;
-			this.@__convertBanks.Text = "Convert Banks";
-			this.@__convertBanks.UseVisualStyleBackColor = true;
-			this.@__convertBanks.Click += new System.EventHandler(this.@__convertBanks_Click);
+			this.@__convertNorms.Location = new System.Drawing.Point(8, 64);
+			this.@__convertNorms.Name = "__convertNorms";
+			this.@__convertNorms.Size = new System.Drawing.Size(320, 23);
+			this.@__convertNorms.TabIndex = 2;
+			this.@__convertNorms.Text = "Convert Norms";
+			this.@__convertNorms.UseVisualStyleBackColor = true;
+			this.@__convertNorms.Click += new System.EventHandler(this.@__convertNorms_Click);
 			// 
 			// __convertSynonyms
 			// 
@@ -144,17 +146,29 @@
 			this.@__convertSynonyms.UseVisualStyleBackColor = true;
 			this.@__convertSynonyms.Click += new System.EventHandler(this.@__convertSynonyms_Click);
 			// 
-			// __convertNorms
+			// __convertBanks
 			// 
-			this.@__convertNorms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.@__convertBanks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.@__convertNorms.Location = new System.Drawing.Point(8, 64);
-			this.@__convertNorms.Name = "__convertNorms";
-			this.@__convertNorms.Size = new System.Drawing.Size(320, 23);
-			this.@__convertNorms.TabIndex = 2;
-			this.@__convertNorms.Text = "Convert Norms";
-			this.@__convertNorms.UseVisualStyleBackColor = true;
-			this.@__convertNorms.Click += new System.EventHandler(this.@__convertNorms_Click);
+			this.@__convertBanks.Location = new System.Drawing.Point(8, 6);
+			this.@__convertBanks.Name = "__convertBanks";
+			this.@__convertBanks.Size = new System.Drawing.Size(320, 23);
+			this.@__convertBanks.TabIndex = 0;
+			this.@__convertBanks.Text = "Convert Banks";
+			this.@__convertBanks.UseVisualStyleBackColor = true;
+			this.@__convertBanks.Click += new System.EventHandler(this.@__convertBanks_Click);
+			// 
+			// __converValues
+			// 
+			this.@__converValues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.@__converValues.Location = new System.Drawing.Point(8, 93);
+			this.@__converValues.Name = "__converValues";
+			this.@__converValues.Size = new System.Drawing.Size(320, 23);
+			this.@__converValues.TabIndex = 3;
+			this.@__converValues.Text = "Convert Values";
+			this.@__converValues.UseVisualStyleBackColor = true;
+			this.@__converValues.Click += new System.EventHandler(this.@__converValues_Click);
 			// 
 			// Form1
 			// 
@@ -183,6 +197,7 @@
 		private System.Windows.Forms.Button __convertBanks;
 		private System.Windows.Forms.Button __convertSynonyms;
 		private System.Windows.Forms.Button __convertNorms;
+		private System.Windows.Forms.Button __converValues;
 	}
 }
 
