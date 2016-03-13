@@ -32,6 +32,7 @@
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.@__convertBanks = new System.Windows.Forms.Button();
 			this.@__convertSynonyms = new System.Windows.Forms.Button();
+			this.@__convertNorms = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -108,6 +109,7 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.@__convertNorms);
 			this.tabPage2.Controls.Add(this.@__convertSynonyms);
 			this.tabPage2.Controls.Add(this.@__convertBanks);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -142,6 +144,18 @@
 			this.@__convertSynonyms.UseVisualStyleBackColor = true;
 			this.@__convertSynonyms.Click += new System.EventHandler(this.@__convertSynonyms_Click);
 			// 
+			// __convertNorms
+			// 
+			this.@__convertNorms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.@__convertNorms.Location = new System.Drawing.Point(8, 64);
+			this.@__convertNorms.Name = "__convertNorms";
+			this.@__convertNorms.Size = new System.Drawing.Size(320, 23);
+			this.@__convertNorms.TabIndex = 2;
+			this.@__convertNorms.Text = "Convert Norms";
+			this.@__convertNorms.UseVisualStyleBackColor = true;
+			this.@__convertNorms.Click += new System.EventHandler(this.@__convertNorms_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +182,7 @@
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.Button __convertBanks;
 		private System.Windows.Forms.Button __convertSynonyms;
+		private System.Windows.Forms.Button __convertNorms;
 	}
 }
 

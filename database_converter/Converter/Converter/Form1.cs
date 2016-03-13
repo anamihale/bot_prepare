@@ -100,5 +100,25 @@ namespace Converter {
 				System.IO.File.WriteAllText(sfd.FileName, sql);
 			}
 		}
+
+		private void __convertNorms_Click(object sender, EventArgs e) {
+			var sql = "INSERT INTO norms VALUES";
+			var sqlValues = new List<string>();
+			using (var ofd = new OpenFileDialog { Filter = "CSV-files|*.csv" }) {
+				if (ofd.ShowDialog(this) != DialogResult.OK) return;
+				var text = System.IO.File.ReadAllText(ofd.FileName);
+				foreach (var line in text.Split('\n').Skip(1)) {
+					if (string.IsNullOrEmpty(line)) continue;
+					var values = line.Split(';');
+					if (values.Length != 4) continue;
+					sqlValues.Add($"({values[0]}, '{values[1]}', {values[2]}, '{values[3]}')");
+                }
+			}
+			sql += string.Join(",", sqlValues) + ";";
+			using (var sfd = new SaveFileDialog { Filter = "SQL-file|*.sql" }) {
+				if (sfd.ShowDialog(this) != DialogResult.OK) return;
+				System.IO.File.WriteAllText(sfd.FileName, sql);
+			}
+		}
 	}
 }
